@@ -1,0 +1,36 @@
+@use '_variables' as *;
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #D9D9D9;
+  color: $black;
+  margin: 1vw;
+
+  // font-family: Avenir, Helvetica;
+  // display: flex;
+  // place-items: center;
+  // box-sizing: border-box;
+  // text-align: center;
+
+  cursor: default;
+}
+
+a {
+  // color: $blue;
+  text-decoration: none;
+  cursor: default;
+  color: #000000;
+  &:active {
+    color: #000000;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+ul, ol, li {
+  list-style: none;
+}

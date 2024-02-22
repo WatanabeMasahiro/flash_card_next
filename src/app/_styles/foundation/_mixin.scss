@@ -1,0 +1,20 @@
+// レスポンス対応@media, 画面の大きさごとのpx値変更
+
+@use '_variables' as *;
+
+@mixin contentBox($width: 200px, $height: 200px, $color: var.$white, $scrollable: false) {
+    background-color: $color;
+    width: $width;
+    height: $height;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    @if $scrollable {
+        overflow-y: scroll;
+    }
+}
+
+@mixin mq($breakpoint: md) {
+    @media screen and (max-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+    }
+}

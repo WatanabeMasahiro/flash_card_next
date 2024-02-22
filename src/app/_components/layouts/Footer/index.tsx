@@ -1,16 +1,14 @@
-"use client";
-
-import styles from "./footer.module.scss";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export function Footer() {
-  const router = useRouter();
 
   return (
-    <div className={styles.footerArea}>
-      <h1 className={styles.footerText} onClick={router.replace("/")}>
-        Next.jsの勉強(Footer)
+    <footer className="styles.footerArea">
+      <h1 className="styles.footerText">
+        <Link href="/">
+          Next.jsの勉強(Footer)
+        </Link>
       </h1>
-    </div>
+    </footer>
   );
 }

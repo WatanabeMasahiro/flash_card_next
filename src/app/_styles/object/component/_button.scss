@@ -1,0 +1,39 @@
+// @use "@app/_styles/foundation" as *;
+
+.c-button {
+  height: 30px;
+  width: 150px;
+  //// border: 1px solid $gray;
+  // color: $black;
+  // background-color: $white;
+  border-radius: 20px;
+  box-shadow: none;
+  //// font-size: $fs-text;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: red;
+  &:hover {
+    background-color: orange;
+  }
+  // &.is-active {}
+  &.-test {
+    background-color: greenyellow;
+    width: 160px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 16px;
+    &:hover {
+      background-color: gray;
+    }
+  }
+  &-test2 {
+    background-color: blue;
+    width: 160px;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 16px;
+  }
+}

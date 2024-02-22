@@ -1,15 +1,16 @@
-"use client";
-import "./header.scss";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
-export function Header() {
-  const router = useRouter();
+export function Header(props: any) {
+  const { children, tester } = props;
 
   return (
-    <div className="headerArea">
-      <h1 className="headerText" onClick={router.push("/")}>
-        Next.jsの勉強(Header)
+    <header className="headerArea">
+      <h1 className="headerText">
+        <Link href="/">
+          Next.jsの勉強({tester})
+        </Link>
       </h1>
-    </div>
+      <p>{children}</p>
+    </header>
   );
 }

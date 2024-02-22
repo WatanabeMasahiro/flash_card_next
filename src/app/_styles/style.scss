@@ -2,18 +2,20 @@
 // Foundation
 // ==========================================================================
 
-@import "foundation/_reset";  //リセットCSSを優先して読み込み
-@import "foundation/_base";
+@use "foundation/_reset";  //リセットCSSを優先して読み込み
+@use "foundation/_base";
+@use "foundation/_mixin";
+@use "foundation/_variables";
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import "layout/_footer";
-@import "layout/_header";
-@import "layout/_main";
-@import "layout/navbar";
-@import "layout/_sidebar";
+@use "layout/_footer";
+@use "layout/_header";
+@use "layout/_main";
+@use "layout/_navbar";
+@use "layout/_sidebar";
 
 // ==========================================================================
 // Object
@@ -23,34 +25,30 @@
 // Component
 // -----------------------------------------------------------------
 
-@import "object/components/article-card";
-@import "object/component/_button";
-@import "object/component/_dialog";
-@import "object/components/_form";
-@import "object/component/_grid";
-@import "object/component/_media";
+@use "object/component/_article-card";
+@use "object/component/_button";
+@use "object/component/_dialog";
+@use "object/component/_form";
+@use "object/component/_grid";
+@use "object/component/_media";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import "object/project/delete-account";
-@import "object/project/deteil";
-@import "object/project/home";
-@import "object/project/login";
-@import "object/project/loginfo-change";
-@import "object/project/settings";
-@import "object/project/signup";
-@import "object/project/study";
+@use "object/project/articles";
+@use "object/project/comments";
+@use "object/project/gallery";
+@use "object/project/profile";
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
 
-@import "object/utility/_align";
-@import "object/utility/_clearfix";
-@import "object/utility/_margin";
-@import "object/utility/padding";
-@import "object/utility/_position";
-@import "object/utility/_size";
-@import "object/utility/_text";
+@use "object/utility/_align";
+@use "object/utility/_clearfix";
+@use "object/utility/_margin";
+@use "object/utility/_padding";
+@use "object/utility/_position";
+@use "object/utility/_size";
+@use "object/utility/_text";
