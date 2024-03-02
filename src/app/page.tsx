@@ -34,7 +34,7 @@ export default function Home() {
           </div>
           <div>
             <button
-              className="btn -test"
+              className={`btn -test`}
               onClick={() => {
                 router.push("/test");
               }}

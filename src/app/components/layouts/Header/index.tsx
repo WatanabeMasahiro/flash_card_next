@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export function Header(props: any) {
+export function Header(props:any) {
   const { children, tester } = props;
 
   return (

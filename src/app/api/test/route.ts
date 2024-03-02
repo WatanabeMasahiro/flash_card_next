@@ -2,7 +2,9 @@ import { NextResponse } from "./next/server";
 
 export async function GET(request: any, context: any) {
   console.log(context.params.id);
-  return NextResponse.json("Its TEST, I say GET!!!");
+  return NextResponse.json({
+    message: "Its TEST, I say GET!!!"
+  });
 }
 
 export async function POST() {
