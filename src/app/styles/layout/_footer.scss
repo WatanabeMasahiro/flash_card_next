@@ -1,3 +1,10 @@
 .l-footer {
-  
+  background-color: #9ADF8E;
+  &__copyright {
+    color: #777777;
+    font-size: 16px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 12px;
+  }
 }
