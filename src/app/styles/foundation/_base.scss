@@ -5,9 +5,9 @@ html {
 }
 
 body {
-  background-color: #D9D9D9;
-  color: $black;
-  margin: 1vw;
+  // background-color: #D9D9D9;
+  // color: #FFFFFF;
+  // margin: 1vw;
 
   // font-family: Avenir, Helvetica;
   // display: flex;
@@ -21,7 +21,7 @@ body {
 a {
   // color: $blue;
   text-decoration: none;
-  cursor: default;
+  cursor: pointer;
   color: #000000;
   &:active {
     color: #000000;
@@ -33,4 +33,18 @@ a {
 
 ul, ol, li {
   list-style: none;
+}
+
+
+/* font-family */
+@font-face {
+  font-family: "MPLUSRounded1c-Bold";
+  src:  url("../foundation/fonts/MPLUSRounded1c-Bold.ttf") format("truetype"),
+        url("../foundation/fonts/MPLUSRounded1c-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Niconne-Regular";
+  src:  url("../foundation/fonts/Niconne-Regular.ttf") format("truetype"),
+        url("../foundation/fonts/Niconne-Regular.woff") format("woff");
 }

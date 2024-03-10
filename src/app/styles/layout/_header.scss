@@ -1,3 +1,30 @@
 .l-header {
-  
+  background-color: #9ADF8E;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  &__browserback {
+    &--icon {
+      color: #777777;
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 16px;
+      
+    }
+  }
+  &__title {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0 auto;
+    font-family: "MPLUSRounded1c-Bold", sans-serif;
+    &--fontfamily-niconne {
+      font-family: "Niconne-Regular", sans-serif;
+      font-weight: normal;
+    }
+  }
 }

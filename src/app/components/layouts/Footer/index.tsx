@@ -1,14 +1,8 @@
-import Link from "next/link";
-
 export function Footer() {
 
   return (
-    <footer className="styles.footerArea">
-      <h1 className="styles.footerText">
-        <Link href="/">
-          Next.jsの勉強(Footer)
-        </Link>
-      </h1>
+    <footer className="l-footer">
+      <h1 className="l-footer__copyright">@ 2024 M-Watanabe</h1>
     </footer>
   );
 }
