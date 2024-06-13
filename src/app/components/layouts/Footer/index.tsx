@@ -1,4 +1,4 @@
-export function Footer() {
+export const Footer = (): JSX.Element => {
 
   return (
     <footer className="l-footer">

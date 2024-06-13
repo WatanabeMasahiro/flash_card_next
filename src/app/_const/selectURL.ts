@@ -1,0 +1,2 @@
+export const isBreadcrumbListSelectURL = ['/settings', '/settings/update', 'settings/registration', '/detail', '/study'];
+export const isUserNameSelectURL = ['/', '/delete-account', '/log-info-change'];

@@ -1,7 +1,9 @@
-.u-position {
-  &__text {
-    &--center {
-      text-align: center;
-    }
-  }
+.u-position-flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.u-position-flex-between {
+  display: flex;
+  justify-content: space-between;
 }

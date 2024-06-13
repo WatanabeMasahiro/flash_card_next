@@ -1,0 +1,26 @@
+$v_bg_color: #F8F8F8;
+
+.p-card {
+  &-upper-rounded {
+    background-color: $v_bg_color;
+    border-radius: 5px 5px 0 0;
+    &__header {
+      display: flex;
+      margin: {
+        left: 100% * (64 / 280) / 2;
+        right: 100% * (64 / 280) / 2;
+      }
+      padding-top: 10px;
+    }
+    &__body {
+      margin: {
+        left: 100% * (64 / 280) / 2;
+        right: 100% * (64 / 280) / 2;
+      }
+    }
+  }
+  &-lower-rounded {
+    background-color: $v_bg_color;
+    border-radius: 0 0 5px 5px;
+  }
+}

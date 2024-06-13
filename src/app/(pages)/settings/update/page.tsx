@@ -1,12 +1,12 @@
-const Detail = (): JSX.Element => {
+const Update = (): JSX.Element => {
   return (
     <>
       <main className="l-main">
-        <h2>バンドル詳細画面</h2>
+        <h2>セッティング[更新]画面</h2>
         <p className=""></p>
       </main>
     </>
   );
 };
 
-export default Detail;
+export default Update;

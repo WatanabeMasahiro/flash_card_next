@@ -1,3 +1,23 @@
-// @use "@/_styles/foundation" as *;
+.u-mx-auto {
+  margin: 0 auto;
+}
 
-// .u-margin {}
+.u-my-24 {
+  margin: {
+    top: 24px;
+    bottom: 24px;
+  }
+}
+.u-mt-16 {
+  margin-top: 16px;
+}
+.u-mb-15 {
+  margin-bottom: 15px;
+}
+.u-mb-25 {
+  margin-bottom: 25px;
+}
+
+.u-ml-8 {
+  margin-left: 8px;
+}

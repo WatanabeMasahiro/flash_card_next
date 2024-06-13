@@ -1,0 +1,28 @@
+.c-list {
+  &-flashcard {
+    &__item {
+      > div {
+        padding: {
+          left: 4px;
+          right: 4px;
+        }
+        > .title {
+          padding: {
+            top: 6px;
+            bottom: 2px;
+          }
+        }
+        > .button-field {
+          padding: {
+            top: 4px;
+            bottom: 4px;
+          }
+        }
+      }
+      &:last-of-type > hr {
+        display: none;
+      }
+    }
+  }
+  &-word {}
+}

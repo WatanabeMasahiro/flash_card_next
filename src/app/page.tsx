@@ -1,87 +1,89 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from 'next/navigation';
 import Link from "next/link";
-import UserIcon from '@/app/_asset/icon/user-icon.svg'
+import HomeIcon from '@/app/_asset/icon/home-icon.svg';
+import GearIcon from '@/app/_asset/icon/gear-icon.svg';
 import "./page.scss";
 // import { NextResponse } from "next/server";
 
-export default function Home() {
-  const [num, setNum] = useState(0);
+const Home = (): JSX.Element => {
+  const flashcardTitle = ['英語_動物', '英語_食べ物', '英語_動詞', '数学_公式', '理科_化学式'];
+
+  const [isWordRegisted, setIsWordRegisted] = useState(false);
+  const isWordRegistedClick = () => setIsWordRegisted((isWordRegistedPrev) => !isWordRegistedPrev);
+  // TODO: 単語帳の登録有無の表示処理
+  console.log(isWordRegisted);
+
   const router = useRouter();
 
-  const pathname = usePathname();
-  console.log("URL:", pathname);
-
-  const countUp = () => {
-    setNum(num + 1);
-  };
 
   return (
     <>
       <main className="l-main">
-        <div className="l-breadcrumb-user-area">
-          <div className="breadcrumbList">
-            <p>HOME</p>
-            <p>/</p>
-            <p>詳細</p>
+        <article className="p-card-upper-rounded u-pb-25">
+          <div className="p-card-upper-rounded__header">
+            <HomeIcon />
           </div>
-          {/* ユーザー名は、ホーム画面と退会画面のみ */}
-          <div className="userName">　
-            <i><UserIcon /></i>
-            <p>ハチモジトシトウ</p>
+          <hr className="c-hr" />
+          <div className="p-card-upper-rounded__body">
+          {isWordRegisted ? 
+            <div className="c-button__word-register u-position-flex-center">
+              <button className="u-my-24" onClick={() => router.push('/settings/registration')}>単語登録</button>
+            </div>
+          :
+            <div className="c-list">
+              <ul className="c-list-flashcard">
+              {flashcardTitle.map((item, index) => (
+                <li className="c-list-flashcard__item" key={index}>
+                  <div className="u-position-flex-between">
+                    <h2 className="title u-t-bold">{item}</h2>
+                    <div className="button-field c-button__start">
+                      <button className="" onClick={() => router.push('/study')}>スタート</button>
+                    </div>
+                  </div>
+                  <hr className="c-hr--inner" />
+                </li>
+              ))}
+              </ul>
+            </div>
+          }
           </div>
-        </div>
-        <div className="btnField">
-          <div>
-            <button
-              className="btn"
-              onClick={() => {
-                router.push("/chat");
-              }}
-            >
-              Chatページへ
+          <hr className="c-hr u-mb-25" />
+
+          {isWordRegisted || 
+          <div className="pagination u-position-flex-center">ここにページネーション</div>
+          }
+        </article>
+
+        <article className="p-card-lower-rounded u-mt-16">
+          <div className="c-button__setting u-position-flex-center">
+            <button className={`u-my-24 ${isWordRegisted && 'u-t-opacity-05'}`} onClick={() => router.push('/settings')}>
+              <GearIcon /><span className="u-ml-8">セッティング</span>
             </button>
           </div>
-          <div>
-            <button
-              className={`btn -test`}
-              onClick={() => {
-                router.push("/test");
-              }}
-            >
-              Testページへ
-            </button>
-          </div>
-          <div>
-            <button
-              className="btn-test2"
-              onClick={() => {
-                router.push("/blog/3");
-              }}
-            >
-              Blogページへ
-            </button>
-          </div>
+        </article>
+
+        <div className="c-anchor__login-info-change u-position-flex-center u-mt-16">
+          <a href="/log-info-change">ログイン情報変更</a>
         </div>
 
-        <div>
-          <Link className="btn" href="/chat-copy">Chat-copyページへ</Link>
-        </div>
-        <div>
-          <a className="btn" href="/chat-copy">Chat-copyページへ</a>
-        </div>
-
-        <div>
-          <h3>カウントアップ</h3>
-          <p>{num}</p>
+        {/* TODO: 不要になり次第削除。単語登録済か切替るボタン */}
+        <div className="c-button__dammy u-position-flex-center">
           <button
-            className="btn-test2"
-            onClick={countUp}
-          >プラス１!!!</button>
+            className="u-my-24"
+            onClick={isWordRegistedClick}
+          >単語登録の切替ボタン</button>
         </div>
+
+
+        {/** TODO: 削除
+          * <Link className="btn" href="/chat-copy">Chat-copyページへ</Link>
+          */}
       </main>
     </>
   );
 }
+
+export default Home;

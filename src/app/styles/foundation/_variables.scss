@@ -1,12 +1,13 @@
-//colors
-
+/**
+ * colors
+ */
 // $color-main:    #9ADF8E;
 // $color-bg:      #D9D9D9;
 // $color-etc:    #000000;
 
-
-//font size
-
+/**
+ * font-size
+ */
 $fs-title:     2.0rem;
 $fs-sub_title: 1.8rem;
 $fs-text:      1.4rem;
@@ -16,8 +17,9 @@ $fs-small:     1.2rem;
 $fs-smaller:   1.0rem;
 $fs-x-small:   0.8rem;
 
-// break points
-
+/**
+ * break-points
+ */
 $breakpoints: ( // Bootstrap5確認
     pc:  1280px,
     tb:  960px,

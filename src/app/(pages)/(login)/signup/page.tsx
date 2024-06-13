@@ -1,12 +1,12 @@
-const Detail = (): JSX.Element => {
+const Signup = (): JSX.Element => {
   return (
     <>
       <main className="l-main">
-        <h2>バンドル詳細画面</h2>
+        <h2>ユーザー新規登録</h2>
         <p className=""></p>
       </main>
     </>
   );
 };
 
-export default Detail;
+export default Signup;

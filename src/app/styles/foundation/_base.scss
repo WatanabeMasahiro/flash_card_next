@@ -1,3 +1,10 @@
+/*
+ * Layout（ページを構成する要素に対して使用するクラス）・・・「l-」
+ * Component（複数のページで再利用できる要素に対して使用するクラス）・・・「c-」
+ * Project（ページ単位で使用するクラス）・・・「p-」
+ * Utility（強制的にスタイルを当てたりする調整用のクラス）・・・「u-」
+*/
+
 @use '_variables' as *;
 
 html {
@@ -6,6 +13,13 @@ html {
 
 body {
   background-color: #D9D9D9;
+  max-width: 320px;
+  min-height: 568px;
+  margin: 0.5em auto;
+  border: 2px #666666 solid;
+  box-shadow: 0px 0px 20px 0px #888888;
+  border-radius: 4px;
+
   // color: #FFFFFF;
   // margin: 1vw;
 
@@ -16,6 +30,10 @@ body {
   // text-align: center;
 
   cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 1.0rem
 }
 
 a {
@@ -33,6 +51,12 @@ a {
 
 ul, ol, li {
   list-style: none;
+}
+
+svg {
+  // height: 1cap;
+  vertical-align: top;
+  // width: auto;
 }
 
 

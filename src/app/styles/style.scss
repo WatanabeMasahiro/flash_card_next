@@ -14,8 +14,6 @@
 @use "layout/_footer";
 @use "layout/_header";
 @use "layout/_main";
-@use "layout/_breadcrumb-user-area";
-@use "layout/_sidebar";
 
 // ==========================================================================
 // Object
@@ -25,21 +23,20 @@
 // Component
 // -----------------------------------------------------------------
 
-@use "object/component/_article-card";
+@use "object/component/_anchor";
 @use "object/component/_button";
 @use "object/component/_dialog";
 @use "object/component/_form";
 @use "object/component/_grid";
-@use "object/component/_media";
+@use "object/component/_hr";
+@use "object/component/_list";
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@use "object/project/articles";
-@use "object/project/comments";
-@use "object/project/gallery";
-@use "object/project/profile";
+@use "object/project/_breadcrumb-user-area";
+@use "object/project/_card";
 
 // -----------------------------------------------------------------
 // Utility

@@ -1,5 +1,7 @@
 .l-footer {
   background-color: #9ADF8E;
+  top: 100vh;
+  position: sticky;
   &__copyright {
     color: #777777;
     font-size: 16px;

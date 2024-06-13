@@ -1,7 +1,10 @@
-const DeleteAccount: React.FC = () => {
+const DeleteAccount = (): JSX.Element => {
   return (
     <>
-      <div>TEST DeleteAccount</div>
+      <main className="l-main">
+        <h2>ユーザー退会</h2>
+        <p className=""></p>
+      </main>
     </>
   );
 };

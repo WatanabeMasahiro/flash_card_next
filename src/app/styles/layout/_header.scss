@@ -1,30 +1,43 @@
 .l-header {
   background-color: #9ADF8E;
-  &__inner {
+  &-inner {
     display: flex;
     justify-content: center;
     align-items: baseline;
     letter-spacing: 0.1em;
     padding-top: 4px;
     padding-bottom: 4px;
-  }
-  &__browserback {
-    &--icon {
-      color: #777777;
-      font-size: 20px;
-      font-weight: bold;
-      margin-left: 16px;
-      
+    &__browserback-arrow {
+      &--icon {
+        color: #777777;
+        font-size: 20px;
+        font-weight: bold;
+        width: 24px;
+        height: 24px;
+        margin: {
+          right: 16px;
+          left: 16px;
+        }
+      }
     }
-  }
-  &__title {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0 auto;
-    font-family: "MPLUSRounded1c-Bold", sans-serif;
-    &--fontfamily-niconne {
-      font-family: "Niconne-Regular", sans-serif;
-      font-weight: normal;
+    &__title {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 0 auto;
+      font-family: "MPLUSRounded1c-Bold", sans-serif;
+      text-shadow: 2px 4px 1px rgba(0, 0, 0, 0.25);
+      &--fontfamily-niconne {
+        font-family: "Niconne-Regular", sans-serif;
+        font-weight: normal;
+      }
+    }
+    &__bothends-space {
+      width: 24px;
+      height: 24px;
+      margin: {
+        right: 16px;
+        left: 16px;
+      }
     }
   }
 }
