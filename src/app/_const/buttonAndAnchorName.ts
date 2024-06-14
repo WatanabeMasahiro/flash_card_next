@@ -1,0 +1,27 @@
+export const buttonName = {
+  userRegister: '新規登録',
+  backToHome: 'HOMEへ戻る',
+  login: 'ログイン',
+  toSignup: '新規登録はこちら',
+  userInfoChange: '変更',
+  wordRegister: '単語登録',
+  setting: 'セッティング',
+  accountDelete: '退会',
+  anser: '答え',
+  next: '次へ',
+  check: 'チェック',
+  checked: 'チェック済',
+  yes: 'はい',
+  no: 'いいえ',
+  close: '閉じる',
+  start: 'スタート',
+  edit: '編集',
+  update: '更新',
+  delete: '削除',
+  cancel: 'キャンセル',
+  register: '登録',
+}
+export const anchorName = {
+  toLogInfoChange: 'ログイン情報変更',
+  toDeleteAccount: 'ユーザー退会',
+}

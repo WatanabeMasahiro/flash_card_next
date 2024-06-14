@@ -3,8 +3,9 @@
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import Link from "next/link";
-import HomeIcon from '@/app/_asset/icon/home-icon.svg';
-import GearIcon from '@/app/_asset/icon/gear-icon.svg';
+import HomeIcon40 from '@/app/_asset/icon/home-icon-40.svg';
+import GearIcon24 from '@/app/_asset/icon/gear-icon-24.svg';
+import { buttonName, anchorName } from '@/app/_const/buttonAndAnchorName'
 import "./page.scss";
 // import { NextResponse } from "next/server";
 
@@ -24,13 +25,16 @@ const Home = (): JSX.Element => {
       <main className="l-main">
         <article className="p-card-upper-rounded u-pb-25">
           <div className="p-card-upper-rounded__header">
-            <HomeIcon />
+            <HomeIcon40 />
           </div>
           <hr className="c-hr" />
           <div className="p-card-upper-rounded__body">
           {isWordRegisted ? 
             <div className="c-button__word-register u-position-flex-center">
-              <button className="u-my-24" onClick={() => router.push('/settings/registration')}>単語登録</button>
+              <button
+                className="u-my-24"
+                onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }
+              </button>
             </div>
           :
             <div className="c-list">
@@ -58,15 +62,18 @@ const Home = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__setting u-position-flex-center">
-            <button className={`u-my-24 ${isWordRegisted && 'u-t-opacity-05'}`} onClick={() => router.push('/settings')}>
-              <GearIcon /><span className="u-ml-8">セッティング</span>
+          <div className={`${!isWordRegisted ? 'c-button__setting' : 'c-button__setting-disabled'} u-position-flex-center`}>
+            <button
+              className="u-my-24"
+              disabled={isWordRegisted}
+              onClick={() => router.push('/settings')}>
+              <GearIcon24 className={isWordRegisted && 'u-t-opacity-05'} /><span className="u-ml-8">{ buttonName.setting }</span>
             </button>
           </div>
         </article>
 
         <div className="c-anchor__login-info-change u-position-flex-center u-mt-16">
-          <a href="/log-info-change">ログイン情報変更</a>
+          <Link href="/log-info-change">{ anchorName.toLogInfoChange }</Link>
         </div>
 
         {/* TODO: 不要になり次第削除。単語登録済か切替るボタン */}

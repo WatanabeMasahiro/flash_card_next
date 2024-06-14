@@ -11,8 +11,25 @@
       border-bottom: 2px solid #0000FF;
       border-radius: 10px;
     }
+    :hover {
+      background-color: #CCCCCC;
+    }
+    :active {
+      background-color: #BBBBBB;
+      border: 2px solid #0000FF;
+    }
   }
   &__account-delete {
-    > a {}
+    > a {
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.625em;
+      width: 144px;
+      height: 24px;
+      border-bottom: 2px solid #FF0000;
+      border-radius: 10px;
+    }
   }
 }

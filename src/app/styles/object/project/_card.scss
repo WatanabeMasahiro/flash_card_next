@@ -6,6 +6,7 @@ $v_bg_color: #F8F8F8;
     border-radius: 5px 5px 0 0;
     &__header {
       display: flex;
+      justify-content: space-between;
       margin: {
         left: 100% * (64 / 280) / 2;
         right: 100% * (64 / 280) / 2;
