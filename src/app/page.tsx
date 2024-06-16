@@ -18,7 +18,21 @@ const Home = (): JSX.Element => {
     '英語_動物3', '英語_食べ物3', '英語_動詞3', '数学_公式3', '理科_化学式3',
     '英語_動物4', '英語_食べ物4', '英語_動詞4', '数学_公式4', '理科_化学式4',
     '英語_動物5', '英語_食べ物5', '英語_動詞5', '数学_公式5', '理科_化学式5',
-    '英語_動物6', '英語_食べ物6', '英語_動詞6',
+    '英語_動物6', '英語_食べ物6', '英語_動詞6', '数学_公式6', '理科_化学式6',
+    '英語_動物7', '英語_食べ物7', '英語_動詞7', '数学_公式7', '理科_化学式7',
+    '英語_動物8', '英語_食べ物8', '英語_動詞8', '数学_公式8', '理科_化学式8',
+    '英語_動物9', '英語_食べ物9', '英語_動詞9', '数学_公式9', '理科_化学式9',
+    '英語_動物10', '英語_食べ物10', '英語_動詞10', '数学_公式10', '理科_化学式10',
+    '英語_動物11', '英語_食べ物11', '英語_動詞11', '数学_公式11', '理科_化学式11',
+    '英語_動物12', '英語_食べ物12', '英語_動詞12', '数学_公式12', '理科_化学式12',
+    '英語_動物13', '英語_食べ物13', '英語_動詞13', '数学_公式13', '理科_化学式13',
+    '英語_動物14', '英語_食べ物14', '英語_動詞14', '数学_公式14', '理科_化学式14',
+    '英語_動物15', '英語_食べ物15', '英語_動詞15', '数学_公式15', '理科_化学式15',
+    '英語_動物16', '英語_食べ物16', '英語_動詞16', '数学_公式16', '理科_化学式16',
+    '英語_動物17', '英語_食べ物17', '英語_動詞17', '数学_公式17', '理科_化学式17',
+    '英語_動物18', '英語_食べ物18', '英語_動詞18', '数学_公式18', '理科_化学式18',
+    '英語_動物19', '英語_食べ物19', '英語_動詞19', '数学_公式19', '理科_化学式19',
+    '英語_動物20', '英語_食べ物20', '英語_動詞20', '数学_公式20', '理科_化学式20',
   ];
 
   const [isWordRegisted, setIsWordRegisted] = useState<boolean>(false);
@@ -76,26 +90,26 @@ const Home = (): JSX.Element => {
           <hr className="c-hr u-mb-25" />
 
           {isWordRegisted || 
-          <div className="p-pagination u-position-flex-center">
+          <div className="p-pagination u-position-flex-center u-t-bold">
             <ReactPaginate
               pageCount={ pageCount } //総ページ数。
-              marginPagesDisplayed={ 2 } //先頭と末尾に表示するページの数。
-              pageRangeDisplayed={ 5 } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
+              marginPagesDisplayed={ 1 } //先頭と末尾に表示するページの数。
+              pageRangeDisplayed={ 3 } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
               onPageChange={ handlePageItemClick } //ページネーションのリンクをクリックしたときのイベント
-              containerClassName='pagination' //ページネーションリンクの親要素(ul要素)のクラス名
-              pageClassName='page-item' //各子要素(li要素)のクラス名
+              containerClassName='ui-item' //ページネーションリンクの親要素(ul要素)のクラス名
+              pageClassName='li-item' //各子要素(li要素)のクラス名
               pageLinkClassName='page-link' //ページネーションのリンクのクラス名
               activeClassName='active' //現在のページ番号のクラス名
               previousLabel='<' //前ページ番号に戻すリンクのテキスト
               nextLabel='>' //次ページに進むリンクのテキスト
-              previousClassName='page-item' // '<'の親要素(li)のクラス名
-              nextClassName='page-item' //'>'の親要素(li)のクラス名
-              previousLinkClassName='page-link'  //'<'のリンクのクラス名
-              nextLinkClassName='page-link'　//'>'のリンクのクラス名
+              previousClassName='prev-li-item' // '<'の親要素(li)のクラス名
+              nextClassName='next-li-item' //'>'の親要素(li)のクラス名
+              previousLinkClassName='prex-page-link'  //'<'のリンクのクラス名
+              nextLinkClassName='next-page-link'　//'>'のリンクのクラス名
               disabledClassName='disabled' //先頭 or 末尾に行ったときにそれ以上戻れ(進め)なくするためのクラス
               breakLabel='...' // ページがたくさんあるときに表示しない番号に当たる部分をどう表示するか
-              breakClassName='page-item' // 上記の「…」のクラス名
-              breakLinkClassName='page-link' // 「…」の中のリンクにつけるクラス
+              breakClassName='breaklabel-li-item' // 上記の「…」のクラス名
+              breakLinkClassName='breaklabel-page-link' // 「…」の中のリンクにつけるクラス
               renderOnZeroPageCount={ null } // 総ページ数が0の場合の呼び出しレンダリング関数
             />
           </div>
