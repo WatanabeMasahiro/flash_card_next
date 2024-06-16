@@ -1,0 +1,10 @@
+.p-pagination {
+  background-color: skyblue;
+  > .pagination {
+    display: flex;
+    justify-content: space-between;
+    > .page-item {
+      border: 1px solid gray;
+    }
+  }
+}
