@@ -6,7 +6,7 @@ import ReactPaginate from 'react-paginate';
 import GearIcon40 from '@/app/_asset/icon/gear-icon-40.svg';
 import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
 import { buttonName } from '@/app/_const/buttonAndAnchorName';
-import { paginateItemsPerPage } from '@/app/_const/paginateItemsPerPage';
+import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '@/app/_const/pagination';
 
 const Settings = (): JSX.Element => {
   const flashcardTitles  = [
@@ -80,8 +80,8 @@ const Settings = (): JSX.Element => {
           <div className="p-pagination u-position-flex-center u-t-bold">
           <ReactPaginate
             pageCount={ pageCount } //総ページ数。
-            marginPagesDisplayed={ 1 } //先頭と末尾に表示するページの数。
-            pageRangeDisplayed={ 3 } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
+            marginPagesDisplayed={ marginPagesDisplayed } //先頭と末尾に表示するページの数。
+            pageRangeDisplayed={ pageRangeDisplayed } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
             onPageChange={ handlePageItemClick } //ページネーションのリンクをクリックしたときのイベント
             containerClassName='ui-item' //ページネーションリンクの親要素(ul要素)のクラス名
             pageClassName='li-item' //各子要素(li要素)のクラス名
