@@ -3,7 +3,7 @@ export const buttonName = {
   backToHome: 'HOMEへ戻る',
   login: 'ログイン',
   toSignup: '新規登録はこちら',
-  userInfoChange: '変更',
+  logInfoChange: '変更',
   wordRegister: '単語登録',
   setting: 'セッティング',
   accountDelete: '退会',

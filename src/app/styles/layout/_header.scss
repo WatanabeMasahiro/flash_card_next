@@ -4,13 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     padding-top: 4px;
     padding-bottom: 4px;
     &__browserback-arrow {
       &--icon {
         color: #777777;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: bold;
         width: 24px;
         height: 24px;
@@ -21,7 +21,7 @@
       }
     }
     &__title {
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: bold;
       margin: 0 auto;
       font-family: "MPLUSRounded1c-Bold", sans-serif;

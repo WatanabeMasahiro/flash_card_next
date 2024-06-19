@@ -56,7 +56,7 @@ const Home = (): JSX.Element => {
   return (
     <>
       <main className="l-main">
-        <article className="p-card-upper-rounded u-pb-25">
+        <article className="p-card-upper-rounded u-pb-24">
           <div className="p-card-upper-rounded__header">
             <HomeIcon40 />
           </div>
@@ -87,7 +87,7 @@ const Home = (): JSX.Element => {
             </div>
           }
           </div>
-          <hr className="c-hr u-mb-25" />
+          <hr className="c-hr u-mb-24" />
 
           {isWordRegisted || 
           <div className="p-pagination u-position-flex-center u-t-bold">
@@ -127,22 +127,20 @@ const Home = (): JSX.Element => {
           </div>
         </article>
 
-        <div className="c-anchor__login-info-change u-position-flex-center u-mt-16">
-          <Link href="/log-info-change">{ anchorName.toLogInfoChange }</Link>
-        </div>
+        <article>
+          <div className="c-anchor__login-info-change u-position-flex-center u-mt-16">
+            <Link href="/log-info-change">{ anchorName.toLogInfoChange }</Link>
+          </div>
+        </article>
 
         {/* TODO: 不要になり次第削除。単語登録済か切替るボタン */}
         <div className="c-button__dammy u-position-flex-center">
           <button
             className="u-my-24"
-            onClick={isWordRegistedClick}
+            onClick={() => isWordRegistedClick()}
           >単語登録の切替ボタン</button>
         </div>
 
-
-        {/** TODO: 削除
-          * <Link className="btn" href="/chat-copy">Chat-copyページへ</Link>
-          */}
       </main>
     </>
   );

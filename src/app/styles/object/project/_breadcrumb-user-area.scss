@@ -1,23 +1,25 @@
 .p-breadcrumb-user-area {
   font-size: 0.5em;
   max-width: 280px;
-  max-height: 24px;
+  max-height: 28px;
   margin: 0 auto;
   padding: {
+    top: 4px;
     left: 20px;
+    bottom: 4px;
     right: 12px;
   }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .breadcrumb-list {
+  > .breadcrumb-list {
     display: flex;
     &__bothends-space {
       width: 24px;
       height: 24px;
     }
   }
-  .user-name {
+  > .user-name {
     display: flex;
     align-items: center;
     > p {

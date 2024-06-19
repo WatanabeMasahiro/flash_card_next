@@ -50,10 +50,10 @@ const Settings = (): JSX.Element => {
   return (
     <>
       <main className="l-main">
-        <article className="p-card-upper-rounded u-pb-25">
+        <article className="p-card-upper-rounded u-pb-24">
           <div className="p-card-upper-rounded__header">
             <GearIcon40 />
-            <div className="c-button__word-register-non-shadow">
+            <div className="c-button__word-register--non-shadow">
               <button onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }</button>
             </div>
           </div>
@@ -75,7 +75,7 @@ const Settings = (): JSX.Element => {
               </ul>
             </div>
           </div>
-          <hr className="c-hr u-mb-25" />
+          <hr className="c-hr u-mb-24" />
           {isWordRegisted || 
           <div className="p-pagination u-position-flex-center u-t-bold">
           <ReactPaginate
@@ -104,7 +104,7 @@ const Settings = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__back-to-home u-position-flex-center">
+          <div className="c-button__to-home u-position-flex-center">
             <button className="u-my-24" onClick={() => router.push('/')}>
               <HomeIcon24 /><span className="u-ml-8">{ buttonName.backToHome }</span>
             </button>

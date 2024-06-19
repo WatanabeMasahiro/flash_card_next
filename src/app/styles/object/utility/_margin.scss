@@ -2,6 +2,12 @@
   margin: 0 auto;
 }
 
+.u-my-20 {
+  margin: {
+    top: 20px;
+    bottom: 20px;
+  }
+}
 .u-my-24 {
   margin: {
     top: 24px;
@@ -11,11 +17,14 @@
 .u-mt-16 {
   margin-top: 16px;
 }
-.u-mb-15 {
-  margin-bottom: 15px;
+.u-mt-24 {
+  margin-top: 24px;
 }
-.u-mb-25 {
-  margin-bottom: 25px;
+.u-mb-16 {
+  margin-bottom: 16px;
+}
+.u-mb-24 {
+  margin-bottom: 24px;
 }
 
 .u-ml-8 {
