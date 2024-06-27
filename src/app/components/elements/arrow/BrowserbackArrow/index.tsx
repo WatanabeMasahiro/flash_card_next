@@ -6,7 +6,7 @@ export function BrowserbackArrow() {
   
   return (
     <i
-      className="l-header-inner__browserback-arrow--icon"
+      className="c-arrow-browserback"
       onClick={() => router.back()}
     >
       <ArrowIcon />

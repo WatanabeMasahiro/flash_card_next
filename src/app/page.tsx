@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from "next/link";
+import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import HomeIcon40 from '@/app/_asset/icon/home-icon-40.svg';
 import GearIcon24 from '@/app/_asset/icon/gear-icon-24.svg';
@@ -61,7 +61,7 @@ const Home = (): JSX.Element => {
             <HomeIcon40 />
           </div>
           <hr className="c-hr" />
-          <div className="p-card-upper-rounded__body">
+          <div className="p-card-upper-rounded__body--margin-32">
           {isWordRegisted ? 
             <div className="c-button__word-register u-position-flex-center">
               <button
@@ -128,7 +128,7 @@ const Home = (): JSX.Element => {
         </article>
 
         <article>
-          <div className="c-anchor__login-info-change u-position-flex-center u-mt-16">
+          <div className="c-anchor__login-info-change u-position-flex-center u-my-16">
             <Link href="/log-info-change">{ anchorName.toLogInfoChange }</Link>
           </div>
         </article>

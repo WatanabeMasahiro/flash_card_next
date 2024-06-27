@@ -1,5 +1,6 @@
 .l-header {
   background-color: #9ADF8E;
+  border-radius: 2px 2px 0 0; // TODO: レスポンシブ対応にする？
   &-inner {
     display: flex;
     justify-content: center;
@@ -7,19 +8,6 @@
     letter-spacing: 0.08em;
     padding-top: 4px;
     padding-bottom: 4px;
-    &__browserback-arrow {
-      &--icon {
-        color: #777777;
-        font-size: 1.25rem;
-        font-weight: bold;
-        width: 24px;
-        height: 24px;
-        margin: {
-          right: 16px;
-          left: 16px;
-        }
-      }
-    }
     &__title {
       font-size: 2rem;
       font-weight: bold;

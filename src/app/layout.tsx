@@ -1,6 +1,7 @@
 "use client";
 
 import type { Metadata } from "next";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 // import { Inter } from "next/font/google";
 import "ress";
@@ -22,13 +23,27 @@ const RootLayout = ({
 
   const pathname = usePathname();
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const handleScroll = (event: Event | undefined) => {
+    const scrollTop: number = (event?.currentTarget as HTMLElement).scrollTop;
+    if (scrollTop !== undefined) {
+      setScrollPosition(scrollTop);
+    }
+  }
+
   return (
     <html lang="ja">
       <body>
         <Header />
-        <BreadcrumbUserArea pathname={pathname} />
-        {children}
-        <Footer />
+        <div
+        onScroll={ () => handleScroll(event) }
+        className="c-scroll"
+        role="scrollbar"
+        >
+          <BreadcrumbUserArea pathname={pathname} />
+          {children}
+        </div>
+        <Footer scrollPosition={scrollPosition} />
       </body>
     </html>
   );

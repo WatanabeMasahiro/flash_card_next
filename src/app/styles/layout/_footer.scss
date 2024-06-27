@@ -1,5 +1,6 @@
 .l-footer {
   background-color: #9ADF8E;
+  border-radius: 0 0 2px 2px; // TODO: レスポンシブ対応にする？
   top: 100vh;
   position: sticky;
   &__copyright {

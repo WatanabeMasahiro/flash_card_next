@@ -24,6 +24,7 @@
 // -----------------------------------------------------------------
 
 @use "object/component/_anchor";
+@use "object/component/_arrow";
 @use "object/component/_button";
 @use "object/component/_dialog";
 @use "object/component/_form";
@@ -48,5 +49,6 @@
 @use "object/utility/_margin";
 @use "object/utility/_padding";
 @use "object/utility/_position";
+@use "object/utility/_scroll";
 @use "object/utility/_size";
 @use "object/utility/_text";

@@ -1,8 +1,8 @@
 'use client'
 
-import Link from "next/link"
-import { usePathname } from 'next/navigation'
-import { BrowserbackArrow } from '@/app/components/elements/arrow/BrowserbackArrow'
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
+import { BrowserbackArrow } from '@/app/components/elements/arrow/BrowserbackArrow';
 
 export const Header = (): JSX.Element => {
   const pathname = usePathname();

@@ -1,0 +1,55 @@
+.c-arrow {
+  position: relative;
+  &-browserback {
+        color: #777777;
+        font-size: 1.25rem;
+        font-weight: bold;
+        width: 24px;
+        height: 24px;
+        margin: {
+          right: 16px;
+          left: 16px;
+        }
+  }
+  &-backtotop {
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    animation: fadein 0.8s ease forwards;
+    @keyframes fadein {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    &__icon {
+      :hover {
+        stroke: #0cf;
+      }
+    }
+    :hover {
+      background-color: blueviolet;
+    }
+    :active {
+      background-color: cyan;
+    }
+    // TODO: 非表示状態のアニメーション。不要になり次第削除。
+    // &__none {
+    //   position: absolute;
+    //   right: 32px;
+    //   bottom: 32px;
+    //   animation: fadeout 0.8s ease forwards;
+    //   @keyframes fadeout {
+    //     0% {
+    //       opacity: 1;
+    //     }
+    //     100% {
+    //       opacity: 0;
+    //       display: none;
+    //     }
+    //   }
+    // }
+  }
+}

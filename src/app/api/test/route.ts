@@ -1,7 +1,6 @@
-import { NextResponse } from "./next/server";
+import { NextResponse } from "next/server";
 
-export async function GET(request: any, context: any) {
-  console.log(context.params.id);
+export async function GET() {
   return NextResponse.json({
     message: "Its TEST, I say GET!!!"
   });

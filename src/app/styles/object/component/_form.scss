@@ -1,7 +1,39 @@
 .c-form {
-  &-primary { }
-  &-disabled { }
-  
-  > .field { }
-  > .action { }
+  &__title {
+    > label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08rem;
+    }
+    > span[class='required'] {
+      font-size: 0.625rem;
+      font-weight: 400;
+      letter-spacing: 0rem;
+      color: #FF0000;
+      margin-left: 4px;
+    }
+  }
+  &__input {
+    margin-top: 8px;
+    > input[type='text'] {
+      width: 100%;
+      padding: {
+        right: 10px;
+        left: 10px;
+        top: 4px;
+        bottom: 4px;
+      }
+      background-color: #FFFFFF;
+      border: 1px solid #B3B3B3;
+      border-radius: 8px;
+    }
+  }
+  &__validation {
+    margin-top: 4px;
+    > p {
+      font-size: 0.625rem;
+      font-weight: 400;
+      color: #FF0000;
+    }
+  }
 }

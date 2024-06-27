@@ -58,7 +58,7 @@ const Settings = (): JSX.Element => {
             </div>
           </div>
           <hr className="c-hr" />
-          <div className="p-card-upper-rounded__body">
+          <div className="p-card-upper-rounded__body--margin-32">
             <div className="c-list">
               <ul className="c-list-flashcard">
               {currentFlashcardTitles.map((item, index) => (
@@ -78,28 +78,28 @@ const Settings = (): JSX.Element => {
           <hr className="c-hr u-mb-24" />
           {isWordRegisted || 
           <div className="p-pagination u-position-flex-center u-t-bold">
-          <ReactPaginate
-            pageCount={ pageCount } //総ページ数。
-            marginPagesDisplayed={ marginPagesDisplayed } //先頭と末尾に表示するページの数。
-            pageRangeDisplayed={ pageRangeDisplayed } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
-            onPageChange={ handlePageItemClick } //ページネーションのリンクをクリックしたときのイベント
-            containerClassName='ui-item' //ページネーションリンクの親要素(ul要素)のクラス名
-            pageClassName='li-item' //各子要素(li要素)のクラス名
-            pageLinkClassName='page-link' //ページネーションのリンクのクラス名
-            activeClassName='active' //現在のページ番号のクラス名
-            previousLabel='<' //前ページ番号に戻すリンクのテキスト
-            nextLabel='>' //次ページに進むリンクのテキスト
-            previousClassName='prev-li-item' // '<'の親要素(li)のクラス名
-            nextClassName='next-li-item' //'>'の親要素(li)のクラス名
-            previousLinkClassName='prex-page-link'  //'<'のリンクのクラス名
-            nextLinkClassName='next-page-link'　//'>'のリンクのクラス名
-            disabledClassName='disabled' //先頭 or 末尾に行ったときにそれ以上戻れ(進め)なくするためのクラス
-            breakLabel='...' // ページがたくさんあるときに表示しない番号に当たる部分をどう表示するか
-            breakClassName='breaklabel-li-item' // 上記の「…」のクラス名
-            breakLinkClassName='breaklabel-page-link' // 「…」の中のリンクにつけるクラス
-            renderOnZeroPageCount={ null } // 総ページ数が0の場合の呼び出しレンダリング関数
-          />
-        </div>
+            <ReactPaginate
+              pageCount={ pageCount } //総ページ数。
+              marginPagesDisplayed={ marginPagesDisplayed } //先頭と末尾に表示するページの数。
+              pageRangeDisplayed={ pageRangeDisplayed } //上記の「今いるページの前後」の番号をいくつ表示させるかを決めます。
+              onPageChange={ handlePageItemClick } //ページネーションのリンクをクリックしたときのイベント
+              containerClassName='ui-item' //ページネーションリンクの親要素(ul要素)のクラス名
+              pageClassName='li-item' //各子要素(li要素)のクラス名
+              pageLinkClassName='page-link' //ページネーションのリンクのクラス名
+              activeClassName='active' //現在のページ番号のクラス名
+              previousLabel='<' //前ページ番号に戻すリンクのテキスト
+              nextLabel='>' //次ページに進むリンクのテキスト
+              previousClassName='prev-li-item' // '<'の親要素(li)のクラス名
+              nextClassName='next-li-item' //'>'の親要素(li)のクラス名
+              previousLinkClassName='prex-page-link'  //'<'のリンクのクラス名
+              nextLinkClassName='next-page-link'　//'>'のリンクのクラス名
+              disabledClassName='disabled' //先頭 or 末尾に行ったときにそれ以上戻れ(進め)なくするためのクラス
+              breakLabel='...' // ページがたくさんあるときに表示しない番号に当たる部分をどう表示するか
+              breakClassName='breaklabel-li-item' // 上記の「…」のクラス名
+              breakLinkClassName='breaklabel-page-link' // 「…」の中のリンクにつけるクラス
+              renderOnZeroPageCount={ null } // 総ページ数が0の場合の呼び出しレンダリング関数
+            />
+          </div>
           }
         </article>
 

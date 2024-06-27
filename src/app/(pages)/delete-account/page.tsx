@@ -30,7 +30,7 @@ const DeleteAccount = (): JSX.Element => {
             <div className="button-side__bothends-space"></div>
           </div>
           <hr className="c-hr" />
-          <div className="p-card-upper-rounded__body">
+          <div className="p-card-upper-rounded__body--margin-32">
             <div className="u-position-flex-center u-mt-24 u-t-bold">
               <p>{ cardMessage.confirmDeleteAccount }</p>
             </div>
