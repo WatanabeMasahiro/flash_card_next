@@ -4,8 +4,8 @@ import { useRouter } from 'next/navigation';
 import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
 import { buttonName } from '@/app/_const/buttonAndAnchorName';
 import { dialogMessage } from '@/app/_const/dialogMessage';
-import { cardHeaderTitle } from '@/app/_const/cardHeaderTitle';
-import { cardMessage } from '@/app/_const/cardMessage';
+import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
+import { cardMessage } from '@/app/_const/card/cardMessage';
 
 const DeleteAccount = (): JSX.Element => {
   const router = useRouter();

@@ -6,7 +6,7 @@ import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
 import { formConst } from '@/app/_const/form';
 import { buttonName, anchorName } from '@/app/_const/buttonAndAnchorName';
 import { dialogMessage } from '@/app/_const/dialogMessage';
-import { cardHeaderTitle } from '@/app/_const/cardHeaderTitle';
+import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
 
 const LogInfoChange = (): JSX.Element => {
   const router = useRouter();
@@ -97,8 +97,6 @@ const LogInfoChange = (): JSX.Element => {
             <Link href="/delete-account">{ anchorName.toDeleteAccount }</Link>
           </div>
         </article>
-
-        {/* TODO: 「ページ上部へ戻る」ボタンの実装 */}
       </main>
     </>
   );

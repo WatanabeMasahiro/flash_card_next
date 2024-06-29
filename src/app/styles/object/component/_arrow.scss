@@ -26,14 +26,16 @@
     }
     &__icon {
       :hover {
-        stroke: #0cf;
+        fill: #DDDDDD; // 塗りの色
+        stroke: #666666; // 線の色
+        // stroke-width: 4;// 線の幅
+        // stroke-linecap: ;// 線端の種類
+        // stroke-linejoin: ;// 線の曲がり角や輪郭の種類
       }
-    }
-    :hover {
-      background-color: blueviolet;
-    }
-    :active {
-      background-color: cyan;
+      :active {
+        fill: #BBBBBB; // 塗りの色
+        stroke: #666666; // 線の色
+      }
     }
     // TODO: 非表示状態のアニメーション。不要になり次第削除。
     // &__none {

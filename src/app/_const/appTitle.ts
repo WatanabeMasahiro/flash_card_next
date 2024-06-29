@@ -1,0 +1,1 @@
+export const appTitle = '単語帳_fc';

@@ -1,0 +1,1 @@
+export const footerCopyright = '@ 2024 M-Watanabe';
