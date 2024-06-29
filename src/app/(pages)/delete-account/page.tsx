@@ -24,7 +24,7 @@ const DeleteAccount = (): JSX.Element => {
         <article className="p-card-upper-rounded u-pb-24">
           <div className="p-card-upper-rounded__header">
             <div className="page-icon__bothends-space"></div>
-            <div className="page-title">
+            <div className="page-title page-title--large">
               <h2>{ cardHeaderTitle.deleteAccount }</h2>
             </div>
             <div className="button-side__bothends-space"></div>
