@@ -7,6 +7,7 @@ import { formConst } from '@/app/_const/form';
 import { buttonName, anchorName } from '@/app/_const/buttonAndAnchorName';
 import { dialogMessage } from '@/app/_const/dialogMessage';
 import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
+import { InputTypeText } from  '@/app/components/elements/input/type/text';
 
 const LogInfoChange = (): JSX.Element => {
   const router = useRouter();
@@ -30,47 +31,21 @@ const LogInfoChange = (): JSX.Element => {
           <hr className="c-hr" />
           <div className="p-card-upper-rounded__body--margin-16">
             <form className="c-form">
-              {/* TODO: フォームパーツのコンポーネント化 */}
-              <div className="u-mt-16">
-                <div className="c-form__title">
-                  <label htmlFor="user-name">{ formConst.title.userName }</label>
-                  <span className="required">{ formConst.required }</span>
-                </div>
-                <div className="c-form__input">
-                  <input id="user-name" type="text"/>
-                </div>
-                <div className="c-form__validation">
-                  <p>{ formConst.validation.lessThanOrEqualTo8 }</p>
-                </div>
-              </div>
-
-              {/* TODO: フォームパーツのコンポーネント化 */}
-              <div className="u-mt-16">
-                <div className="c-form__title">
-                  <label htmlFor="user-name">{ formConst.title.email }</label>
-                  <span className="required">{ formConst.required }</span>
-                </div>
-                <div className="c-form__input">
-                  <input id="user-name" type="text"/>
-                </div>
-                <div className="c-form__validation">
-                  <p>{ formConst.validation.emailFormat }</p>
-                </div>
-              </div>
-
-              {/* TODO: フォームパーツのコンポーネント化 */}
-              <div className="u-mt-16">
-                <div className="c-form__title">
-                  <label htmlFor="user-name">{ formConst.title.password }</label>
-                  <span className="required">{ formConst.required }</span>
-                </div>
-                <div className="c-form__input">
-                  <input id="user-name" type="text"/>
-                </div>
-                <div className="c-form__validation">
-                  <p>{ formConst.validation.least8AlphanumericCharacters }</p>
-                </div>
-              </div>
+              <InputTypeText 
+                title={formConst.title.userName}
+                required={formConst.required}
+                validation={formConst.validation.lessThanOrEqualTo8}
+              />
+              <InputTypeText 
+                title={formConst.title.email}
+                required={formConst.required}
+                validation={formConst.validation.emailFormat}
+              />
+              <InputTypeText 
+                title={formConst.title.password}
+                required={formConst.required}
+                validation={formConst.validation.least8AlphanumericCharacters}
+              />
 
               <div className="c-button__log-info-change u-position-flex-center">
                 <button
