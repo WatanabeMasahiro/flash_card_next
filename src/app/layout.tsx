@@ -1,7 +1,7 @@
 "use client";
 
 import type { Metadata } from "next";
-import { useState, useCallback, useRef } from "react";
+import { useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 // import { Inter } from "next/font/google";
 import "ress";
@@ -51,7 +51,6 @@ const RootLayout = ({
         ref={scrollDivRef}
         onScroll={ () => onScrollPosition(event) }
         className="c-scroll"
-        role="scrollbar"
         >
           <BreadcrumbUserArea pathname={pathname} />
           {children}
