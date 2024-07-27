@@ -1,22 +1,12 @@
 "use client";
 
-import { useRouter } from 'next/navigation';
-import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
-import { buttonName } from '@/app/_const/buttonAndAnchorName';
-import { dialogMessage } from '@/app/_const/dialogMessage';
 import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
 import { cardMessage } from '@/app/_const/card/cardMessage';
+import { DeleteAccountButton } from '@/app/components/elements/button/DeleteAccountButton';
+import { ToHomeAddBorderButton } from '@/app/components/elements/button/ToHomeAddBorderButton';
+
 
 const DeleteAccount = (): JSX.Element => {
-  const router = useRouter();
-
-  const onClickAccountDelete = () => {
-    if(confirm(dialogMessage.confirmDeleteAccount)) {
-      // TODO: アカウント削除処理
-      alert(dialogMessage.alertDeletedAccount);
-      router.push('/login');
-    }
-  }
 
   return (
     <>
@@ -34,24 +24,13 @@ const DeleteAccount = (): JSX.Element => {
             <div className="u-position-flex-center u-mt-24 u-t-bold">
               <p>{ cardMessage.confirmDeleteAccount }</p>
             </div>
-            <div className="c-button__delete-account u-position-flex-center">
-              <button
-                className="u-my-24 u-t-letter-spacing-01"
-                onClick={() => onClickAccountDelete()}>{ buttonName.accountDelete }
-              </button>
-            </div>
+            <DeleteAccountButton />
           </div>
           <hr className="c-hr u-mb-16" />
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__to-home--add-border u-position-flex-center">
-            <button
-              className="u-my-20"
-              onClick={() => router.push('/')}>
-              <HomeIcon24 /><span className="u-ml-8">{ buttonName.backToHome }</span>
-            </button>
-          </div>
+          <ToHomeAddBorderButton />
         </article>
       </main>
     </>

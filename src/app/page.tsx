@@ -2,12 +2,13 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
 import ReactPaginate from 'react-paginate';
 import HomeIcon40 from '@/app/_asset/icon/home-icon-40.svg';
-import GearIcon24 from '@/app/_asset/icon/gear-icon-24.svg';
-import { buttonName, anchorName } from '@/app/_const/buttonAndAnchorName';
 import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '@/app/_const/pagination';
+import { ToWordRegisterButton } from '@/app/components/elements/button/ToWordRegisterButton';
+import { StartButton } from '@/app/components/elements/button/StartButton';
+import { SettingButton } from '@/app/components/elements/button/SettingButton';
+import { LoginInfoChangeAnchor } from '@/app/components/elements/anchor/LoginInfoChangeAnchor';
 import "./page.scss";
 // import { NextResponse } from "next/server";
 
@@ -35,7 +36,9 @@ const Home = (): JSX.Element => {
     '英語_動物20', '英語_食べ物20', '英語_動詞20', '数学_公式20', '理科_化学式20',
   ];
 
+  // 単語帳の登録有無
   const [isWordRegisted, setIsWordRegisted] = useState<boolean>(false);
+  // TODO(削除): 切り替えボタンのメソッド
   const isWordRegistedClick = () => setIsWordRegisted((isWordRegistedPrev) => !isWordRegistedPrev);
   // TODO: 単語帳の登録有無の表示処理
   console.log(isWordRegisted);
@@ -63,12 +66,9 @@ const Home = (): JSX.Element => {
           <hr className="c-hr" />
           <div className="p-card-upper-rounded__body--margin-32">
           {isWordRegisted ? 
-            <div className="c-button__word-register u-position-flex-center">
-              <button
-                className="u-my-24"
-                onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }
-              </button>
-            </div>
+            <ToWordRegisterButton
+              isNonShadow={ false }
+            />
           :
             <div className="c-list">
               <ul className="c-list-flashcard">
@@ -76,9 +76,10 @@ const Home = (): JSX.Element => {
                 <li className="c-list-flashcard__item" key={index}>
                   <div className="u-position-flex-between">
                     <h2 className="title u-t-bold">{item}</h2>
-                    <div className="button-field c-button__start">
+                    <StartButton />
+                    {/* <div className="button-field c-button__start">
                       <button className="" onClick={() => router.push('/study')}>スタート</button>
-                    </div>
+                    </div> */}
                   </div>
                   <hr className="c-hr--inner" />
                 </li>
@@ -117,20 +118,13 @@ const Home = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className={`${!isWordRegisted ? 'c-button__setting' : 'c-button__setting-disabled'} u-position-flex-center`}>
-            <button
-              className="u-my-24"
-              disabled={isWordRegisted}
-              onClick={() => router.push('/settings')}>
-              <GearIcon24 className={isWordRegisted && 'u-t-opacity-05'} /><span className="u-ml-8">{ buttonName.setting }</span>
-            </button>
-          </div>
+          <SettingButton 
+            isWordRegisted={isWordRegisted}
+          />
         </article>
 
         <article>
-          <div className="c-anchor__login-info-change u-position-flex-center u-my-16">
-            <Link href="/log-info-change">{ anchorName.toLogInfoChange }</Link>
-          </div>
+          <LoginInfoChangeAnchor />
         </article>
 
         {/* TODO: 不要になり次第削除。単語登録済か切替るボタン */}

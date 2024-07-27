@@ -53,8 +53,8 @@ const Settings = (): JSX.Element => {
         <article className="p-card-upper-rounded u-pb-24">
           <div className="p-card-upper-rounded__header">
             <GearIcon40 />
-            <div className="c-button__word-register--non-shadow">
-              <button onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }</button>
+            <div className="c-button__to-word-register--non-shadow">
+              <button type="button" onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }</button>
             </div>
           </div>
           <hr className="c-hr" />
@@ -66,7 +66,7 @@ const Settings = (): JSX.Element => {
                   <div className="u-position-flex-between">
                     <h2 className="title u-t-bold">{item}</h2>
                     <div className="button-field c-button__edit">
-                      <button onClick={() => alert('「更新」「削除」「キャンセル」の作成')}>{ buttonName.edit }</button>
+                      <button type="button" onClick={() => alert('「更新」「削除」「キャンセル」の作成')}>{ buttonName.edit }</button>
                     </div>
                   </div>
                   <hr className="c-hr--inner" />
@@ -104,7 +104,7 @@ const Settings = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__to-home u-position-flex-center">
+          <div className="c-button__to-home--non-border u-position-flex-center">
             <button className="u-my-24" onClick={() => router.push('/')}>
               <HomeIcon24 /><span className="u-ml-8">{ buttonName.backToHome }</span>
             </button>

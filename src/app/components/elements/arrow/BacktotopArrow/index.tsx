@@ -12,8 +12,8 @@ export const BacktotopArrow = (props: Props): JSX.Element => {
     <>
       { scrollPosition > 32 &&
       <i
-      className="c-arrow-backtotop"
-      onClick={() => scrollTotopFunc()}
+        className="c-arrow-backtotop"
+        onClick={() => scrollTotopFunc()}
       >
         <ArrowIcon className="c-arrow-backtotop__icon" />
       </i>

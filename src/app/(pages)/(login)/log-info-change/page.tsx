@@ -1,19 +1,20 @@
 "use client";
 
 import { useRouter } from 'next/navigation';
-import Link from "next/link";
-import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
 import { formConst } from '@/app/_const/form';
-import { buttonName, anchorName } from '@/app/_const/buttonAndAnchorName';
 import { dialogMessage } from '@/app/_const/dialogMessage';
 import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
 import { InputTypeText } from  '@/app/components/elements/input/type/text';
+import { LogInfoChangeButton } from '@/app/components/elements/button/LogInfoChangeButton';
+import { ToHomeAddBorderButton } from '@/app/components/elements/button/ToHomeAddBorderButton';
+import { AccountDeleteAnchor } from '@/app/components/elements/anchor/AccountDeleteAnchor';
 
 const LogInfoChange = (): JSX.Element => {
   const router = useRouter();
 
   const onClickLogInfoChange = () => {
     // TODO: ユーザー情報変更処理
+    // TODO: 押下するたびリロードしないようにしたい
     alert(dialogMessage.alertLogInfoChange);
   }
 
@@ -47,31 +48,22 @@ const LogInfoChange = (): JSX.Element => {
                 validation={formConst.validation.least8AlphanumericCharacters}
               />
 
-              <div className="c-button__log-info-change u-position-flex-center">
-                <button
-                  className="u-my-40"
-                  onClick={() => onClickLogInfoChange()}>{ buttonName.logInfoChange }
-                </button>
-              </div>
+              <LogInfoChangeButton
+                onClickLogInfoChange={() => onClickLogInfoChange()}
+              />
+
             </form>
           </div>
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__to-home--add-border u-position-flex-center">
-            <button
-              className="u-my-20"
-              onClick={() => router.push('/')}>
-              <HomeIcon24 /><span className="u-ml-8">{ buttonName.backToHome }</span>
-            </button>
-          </div>
+          <ToHomeAddBorderButton />
         </article>
 
         <article>
-          <div className="c-anchor__account-delete u-position-flex-center u-my-16">
-            <Link href="/delete-account">{ anchorName.toDeleteAccount }</Link>
-          </div>
+          <AccountDeleteAnchor />
         </article>
+
       </main>
     </>
   );

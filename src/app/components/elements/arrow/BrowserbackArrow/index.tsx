@@ -1,7 +1,7 @@
 import { useRouter } from 'next/navigation';
 import ArrowIcon from '@/app/_asset/icon/browserback-arrow.svg';
 
-export function BrowserbackArrow() {
+export const BrowserbackArrow = (): JSX.Element => {
   const router = useRouter();
   
   return (
@@ -10,6 +10,6 @@ export function BrowserbackArrow() {
       onClick={() => router.back()}
     >
       <ArrowIcon />
-  </i>
+    </i>
   )
 }
