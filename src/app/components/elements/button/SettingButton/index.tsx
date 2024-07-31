@@ -13,6 +13,7 @@ export const SettingButton = (props: Props): JSX.Element => {
   return (
     <div className={`${!isWordRegisted ? 'c-button__setting' : 'c-button__setting--disabled'} u-position-flex-center`}>
       <button
+        type="button"
         className="u-my-24"
         disabled={isWordRegisted}
         onClick={() => router.push('/settings')}>

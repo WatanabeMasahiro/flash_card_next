@@ -5,6 +5,13 @@
  * その他、ここにはリセットCSSに補いたいものを記入すること
  */
 
- h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   font-size: 1.0rem
+}
+
+input[type="checkbox"] {
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

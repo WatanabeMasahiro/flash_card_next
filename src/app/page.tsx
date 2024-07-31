@@ -1,14 +1,13 @@
 "use client";
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import ReactPaginate from 'react-paginate';
 import HomeIcon40 from '@/app/_asset/icon/home-icon-40.svg';
 import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '@/app/_const/pagination';
-import { ToWordRegisterButton } from '@/app/components/elements/button/ToWordRegisterButton';
-import { StartButton } from '@/app/components/elements/button/StartButton';
-import { SettingButton } from '@/app/components/elements/button/SettingButton';
-import { LoginInfoChangeAnchor } from '@/app/components/elements/anchor/LoginInfoChangeAnchor';
+import { ToWordRegisterButton } from './components/elements/button/ToWordRegisterButton/index';
+import { StartButton } from './components/elements/button/StartButton/index';
+import { SettingButton } from './components/elements/button/SettingButton/index';
+import { LoginInfoChangeAnchor } from './components/elements/anchor/LoginInfoChangeAnchor/index';
 import "./page.scss";
 // import { NextResponse } from "next/server";
 
@@ -43,7 +42,6 @@ const Home = (): JSX.Element => {
   // TODO: 単語帳の登録有無の表示処理
   console.log(isWordRegisted);
 
-  const router = useRouter();
 
   // ページネーション（アイテム番号は0スタート）
   const itemsPerPage = paginateItemsPerPage; // 1ページ毎に表示するアイテム数
@@ -66,9 +64,7 @@ const Home = (): JSX.Element => {
           <hr className="c-hr" />
           <div className="p-card-upper-rounded__body--margin-32">
           {isWordRegisted ? 
-            <ToWordRegisterButton
-              isNonShadow={ false }
-            />
+            <ToWordRegisterButton />
           :
             <div className="c-list">
               <ul className="c-list-flashcard">
@@ -77,9 +73,6 @@ const Home = (): JSX.Element => {
                   <div className="u-position-flex-between">
                     <h2 className="title u-t-bold">{item}</h2>
                     <StartButton />
-                    {/* <div className="button-field c-button__start">
-                      <button className="" onClick={() => router.push('/study')}>スタート</button>
-                    </div> */}
                   </div>
                   <hr className="c-hr--inner" />
                 </li>
@@ -88,6 +81,7 @@ const Home = (): JSX.Element => {
             </div>
           }
           </div>
+          
           <hr className="c-hr u-mb-24" />
 
           {isWordRegisted || 

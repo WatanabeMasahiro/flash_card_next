@@ -3,7 +3,7 @@
 import { cardHeaderTitle } from '@/app/_const/card/cardHeaderTitle';
 import { cardMessage } from '@/app/_const/card/cardMessage';
 import { DeleteAccountButton } from '@/app/components/elements/button/DeleteAccountButton';
-import { ToHomeAddBorderButton } from '@/app/components/elements/button/ToHomeAddBorderButton';
+import { ToHomeButton } from '@/app/components/elements/button/ToHomeButton';
 
 
 const DeleteAccount = (): JSX.Element => {
@@ -30,7 +30,7 @@ const DeleteAccount = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <ToHomeAddBorderButton />
+          <ToHomeButton />
         </article>
       </main>
     </>

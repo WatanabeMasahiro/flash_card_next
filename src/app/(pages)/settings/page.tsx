@@ -4,11 +4,15 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import ReactPaginate from 'react-paginate';
 import GearIcon40 from '@/app/_asset/icon/gear-icon-40.svg';
-import HomeIcon24 from '@/app/_asset/icon/home-icon-24.svg';
-import { buttonName } from '@/app/_const/buttonAndAnchorName';
-import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '@/app/_const/pagination';
+import { EditButton } from '../../components/elements/button/EditButton/index';
+import { ToWordRegisterNonShadowButton } from '../../components/elements/button/ToWordRegisterNonShadowButton/index';
+import { ToHomeNonBorderButton } from '../../components/elements/button/ToHomeNonBorderButton/index';
+import { SelectUpdateOrDeleteDialog } from '../../components/elements/dialog/setting/SelectUpdateOrDeleteDialog/index';
+import { buttonName } from '../../_const/buttonAndAnchorName';
+import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '../../_const/pagination';
 
 const Settings = (): JSX.Element => {
+  // TODO: JSONでユニークIDを入れる
   const flashcardTitles  = [
     '英語_動物', '英語_食べ物', '英語_動詞', '数学_公式', '理科_化学式',
     '英語_動物2', '英語_食べ物2', '英語_動詞2', '数学_公式2', '理科_化学式2',
@@ -53,11 +57,11 @@ const Settings = (): JSX.Element => {
         <article className="p-card-upper-rounded u-pb-24">
           <div className="p-card-upper-rounded__header">
             <GearIcon40 />
-            <div className="c-button__to-word-register--non-shadow">
-              <button type="button" onClick={() => router.push('/settings/registration')}>{ buttonName.wordRegister }</button>
-            </div>
+            <ToWordRegisterNonShadowButton />
           </div>
+
           <hr className="c-hr" />
+
           <div className="p-card-upper-rounded__body--margin-32">
             <div className="c-list">
               <ul className="c-list-flashcard">
@@ -65,9 +69,10 @@ const Settings = (): JSX.Element => {
                 <li className="c-list-flashcard__item" key={index}>
                   <div className="u-position-flex-between">
                     <h2 className="title u-t-bold">{item}</h2>
-                    <div className="button-field c-button__edit">
-                      <button type="button" onClick={() => alert('「更新」「削除」「キャンセル」の作成')}>{ buttonName.edit }</button>
-                    </div>
+                    <EditButton 
+                      wordNumber={index} 
+                      selectWord={item} 
+                    />
                   </div>
                   <hr className="c-hr--inner" />
                 </li>
@@ -75,7 +80,9 @@ const Settings = (): JSX.Element => {
               </ul>
             </div>
           </div>
+
           <hr className="c-hr u-mb-24" />
+
           {isWordRegisted || 
           <div className="p-pagination u-position-flex-center u-t-bold">
             <ReactPaginate
@@ -104,12 +111,10 @@ const Settings = (): JSX.Element => {
         </article>
 
         <article className="p-card-lower-rounded u-mt-16">
-          <div className="c-button__to-home--non-border u-position-flex-center">
-            <button className="u-my-24" onClick={() => router.push('/')}>
-              <HomeIcon24 /><span className="u-ml-8">{ buttonName.backToHome }</span>
-            </button>
-          </div>
+          <ToHomeNonBorderButton />
         </article>
+
+        <SelectUpdateOrDeleteDialog />
 
       </main>
     </>

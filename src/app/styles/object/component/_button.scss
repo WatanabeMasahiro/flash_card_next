@@ -42,16 +42,14 @@
     > button {
       font-size: 0.75em;
       font-weight: bold;
-                            letter-spacing: 0.1em;
+      letter-spacing: 0.1em;
       text-align: center;
-                            // position: relative;
       top: 0;
       width: 104px;
       height: 40px;
       background-color: #EDAD4D;
       border: 2px solid #777777;
       border-radius: 20px;
-      // box-shadow: 0 4px 4px rgba(100, 100, 100, 0.75);
     }
     :hover {
       background-color: #EDDABE;
@@ -60,7 +58,28 @@
       background-color: #CC9541;
     }
   }
-  &__user-register, &__bundle-register {
+  &__user-register {
+    > button {
+      font-size: 0.75em;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-align: center;
+      position: relative;
+      top: 0;
+      width: 104px;
+      height: 40px;
+      background-color: #EAED4D;
+      border: 2px solid #777777;
+      border-radius: 20px;
+    }
+    :hover {
+      background-color: #ECEDBE;
+    }
+    :active {
+      background-color: #CACC41;
+    }
+  }
+  &__bundle-register {
     > button {
       font-weight: bold;
       text-align: center;
@@ -182,12 +201,14 @@
   &__to-signup {
     > button {
       font-weight: bold;
+      letter-spacing: 0.1em;
       text-align: center;
       position: relative;
       top: 0;
       width: 160px;
-      height: 32px;
+      height: 32 + 8px;
       background-color: #EAED4D;
+      border: 2px solid #777777;
       border-radius: 5px;
       box-shadow: 0 4px 4px rgba(100, 100, 100, 0.75);
     }
@@ -288,3 +309,5 @@
     }
   }
 }
+
+.c-button-field {}
