@@ -5,10 +5,10 @@ import { usePathname } from "next/navigation";
 // import { Inter } from "next/font/google";
 import "ress";
 import "./globals.scss";
-import { appTitle } from "@/app/_const/appTitle";
-import { Header } from "./components/layouts/Header";
-import { BreadcrumbUserArea } from "./components/layouts/BreadcrumbUserArea";
-import { Footer } from "./components/layouts/Footer";
+import { appTitle } from "./_const/appTitle";
+import { Header } from "./components/layouts/Header/index";
+import { BreadcrumbUserArea } from "./components/layouts/BreadcrumbUserArea/index";
+import { Footer } from "./components/layouts/Footer/index";
 
 const RootLayout = ({
   children,

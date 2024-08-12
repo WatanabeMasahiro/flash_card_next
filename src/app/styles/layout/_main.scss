@@ -3,4 +3,8 @@
 .l-main {
   max-width: 280px;
   margin: 0 auto;
+  &--loading {
+    width: 320px;
+    height: 468px;
+  }
 }

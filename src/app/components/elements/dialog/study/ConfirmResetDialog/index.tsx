@@ -7,7 +7,7 @@ export const ConfirmResetDialog = (): JSX.Element => {
     <>
       <article className="p-card-dialog u-mt-16">
         <div className="">確認回数をリセットしますか</div>
-        <div className="button-field">
+        <div className="c-button-field">
           <button className="">はい</button>
           <button className="">いいえ</button>
         </div>

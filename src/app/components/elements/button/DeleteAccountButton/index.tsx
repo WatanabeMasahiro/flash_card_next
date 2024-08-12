@@ -17,7 +17,7 @@ export const DeleteAccountButton = (): JSX.Element => {
     <div className="c-button__delete-account u-position-flex-center">
       <button
         type="button"
-        className="u-my-24 u-t-letter-spacing-01"
+        className="u-my-24"
         onClick={() => onClickAccountDelete()}>{ buttonName.accountDelete }
       </button>
     </div>

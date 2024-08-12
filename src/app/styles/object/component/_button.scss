@@ -1,4 +1,12 @@
 .c-button {
+  &-field {
+    text-align: center;
+    &__inner {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
   &__login {
     > button {
       font-size: 0.75em;
@@ -22,6 +30,7 @@
   &__update {
     > button {
       font-weight: bold;
+      letter-spacing: 0.1em;
       text-align: center;
       top: 0;
       width: 104px;
@@ -101,6 +110,7 @@
   &__delete-account, &__delete {
     > button {
       font-weight: bold;
+      letter-spacing: 0.1em;
       text-align: center;
       position: relative;
       top: 0;
@@ -283,12 +293,73 @@
       border-radius: 20px;
     }
     :hover {
-      background-color: #FFC499 ;
+      background-color: #FFC499;
     }
     :active {
       background-color: #FFC9E9;
     }
   }
+  &__cancel {
+    > button {
+      font-size: 0.75em;
+      font-weight: bold;
+      text-align: center;
+      width: 100px;
+      height: 24px;
+      background-color: #D8D8D8;
+      border: 2px solid #777777;
+      border-radius: 20px;
+    }
+    :hover {
+      background-color: #CCCCCC;
+    }
+    :active {
+      background-color: #999999;
+    }
+  }
+  &__close {
+    > button {
+      font-size: 0.75em;
+      font-weight: bold;
+      text-align: center;
+      width: 100px;
+      height: 40px;
+      background-color: #D8D8D8;
+      border: 2px solid #777777;
+      border-radius: 20px;
+    }
+    :hover {
+      background-color: #CCCCCC;
+    }
+    :active {
+      background-color: #999999;
+    }
+    &--icon {
+      :hover {
+        animation-name: close-icon-hover-animation;
+        animation-duration: 0.1s;
+        animation-fill-mode:forwards;
+        // fill: #DDDDDD; // 塗りの色
+        stroke: #000000; // 線の色
+        // stroke-width: 0;// 線の幅
+        stroke-linecap: round;// 線端の種類
+        stroke-linejoin: round;// 線の曲がり角や輪郭の種類
+        @keyframes close-icon-hover-animation{
+          /*1秒かけてwidth: 50%;→width: 100%;になる動きを記述*/
+          0%{
+            stroke-width: 0;// 線の幅
+            // background-color: #ffffff;
+          }
+          100%{
+            stroke-width: 2;// 線の幅
+            background-color: #dddddd;
+            border-radius: 12px;
+          }
+        }
+      }
+    }
+  }
+
 
   // 不要になり次第削除
   &__dammy {
@@ -309,5 +380,3 @@
     }
   }
 }
-
-.c-button-field {}

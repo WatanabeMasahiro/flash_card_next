@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import HomeIcon40 from '@/app/_asset/icon/home-icon-40.svg';
-import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '@/app/_const/pagination';
+import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from './_const/pagination';
 import { ToWordRegisterButton } from './components/elements/button/ToWordRegisterButton/index';
 import { StartButton } from './components/elements/button/StartButton/index';
 import { SettingButton } from './components/elements/button/SettingButton/index';

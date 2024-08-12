@@ -3,7 +3,8 @@ $v_bg_color: #F8F8F8;
 .p-card {
   &-bundle {
     background-color: $v_bg_color;
-    border-radius: 5px;
+    border-radius: 5px 5px 5px 5px;
+    min-height: 224px;
     &__header {}
     &__body {
       > .flash-card {}
@@ -86,7 +87,20 @@ $v_bg_color: #F8F8F8;
     border-radius: 0 0 5px 5px;
   }
   &-dialog {
+    position: relative;
     background-color: $v_bg_color;
     border-radius: 5px 5px 5px 5px;
+    &__icon {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+    }
+    &__title {
+      font-weight: bold;
+      display: flex;
+      // flex-flow: column;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 }

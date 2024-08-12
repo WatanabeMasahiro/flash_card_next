@@ -8,7 +8,6 @@ import { EditButton } from '../../components/elements/button/EditButton/index';
 import { ToWordRegisterNonShadowButton } from '../../components/elements/button/ToWordRegisterNonShadowButton/index';
 import { ToHomeNonBorderButton } from '../../components/elements/button/ToHomeNonBorderButton/index';
 import { SelectUpdateOrDeleteDialog } from '../../components/elements/dialog/setting/SelectUpdateOrDeleteDialog/index';
-import { buttonName } from '../../_const/buttonAndAnchorName';
 import { paginateItemsPerPage, marginPagesDisplayed, pageRangeDisplayed } from '../../_const/pagination';
 
 const Settings = (): JSX.Element => {
