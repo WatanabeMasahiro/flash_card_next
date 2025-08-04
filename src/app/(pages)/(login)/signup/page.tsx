@@ -3,7 +3,7 @@ import { cardHeaderTitle } from '../../../_const/card/cardHeaderTitle';
 import { InputTypeText } from  '../../../components/elements/input/type/text/index';
 import { InputTypeEmail } from '../../../components/elements/input/type/email/index';
 import { InputTypePassword } from '../../../components/elements/input/type/password/index';
-import { SignupButton } from '../../../components/elements/button/SignupButton/index';
+import { UserRegisterButton } from '../../../components/elements/button/UserRegisterButton/index';
 import { ToHomeButton } from '../../../components/elements/button/ToHomeButton/index';
 
 const Signup = (): JSX.Element => {
@@ -36,7 +36,7 @@ const Signup = (): JSX.Element => {
                 required={formConst.required}
                 validation={formConst.validation.least8AlphanumericCharacters}
               />
-              <SignupButton />
+              <UserRegisterButton />
 
             </form>
           </div>

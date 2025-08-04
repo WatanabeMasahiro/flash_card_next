@@ -15,7 +15,7 @@ export const InputTypeNumber = (props: Props): JSX.Element => {
           <span className="required">{ required }</span>
         </div>
         <div className="c-form__input">
-          {/* TODO: 右寄せ・幅半分 */}
+          {/* TODO: 右寄せ・幅半分(Gridで実現！) */}
           <input id="number-form" type="number"/>
         </div>
         <div className="c-form__validation">

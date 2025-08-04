@@ -10,6 +10,13 @@ const Study = (): JSX.Element => {
             <h2>ボディ</h2>
             <article className="">
               <div>
+                <i>アイコン</i>
+                <button type="button">ワード</button>
+                <i>アイコン</i>
+              </div>
+            </article>
+            <article className="">
+              <div>
                 <button type="button">次へ</button>
               </div>
             </article>

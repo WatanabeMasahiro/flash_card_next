@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { buttonName } from '../../../../_const/buttonAndAnchorName';
 
-export const SignupButton = (): JSX.Element => {
+export const UserRegisterButton = (): JSX.Element => {
   const router = useRouter();
 
   return (

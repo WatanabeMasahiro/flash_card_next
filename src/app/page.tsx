@@ -58,11 +58,11 @@ const Home = (): JSX.Element => {
     <>
       <main className="l-main">
         <article className="p-card-upper-rounded u-pb-24">
-          <div className="p-card-upper-rounded__header">
+          <div className="p-card-upper-rounded__header--margin-16">
             <HomeIcon40 />
           </div>
           <hr className="c-hr" />
-          <div className="p-card-upper-rounded__body--margin-32">
+          <div className="p-card-upper-rounded__body--margin-16">
           {isWordRegisted ? 
             <ToWordRegisterButton />
           :

@@ -1,6 +1,6 @@
-import { formConst } from '@/app/_const/form';
+import { formConst } from '../../../_const/form/index';
 import { cardHeaderTitle } from '../../../_const/card/cardHeaderTitle';
-import { InputTypeText } from  '@/app/components/elements/input/type/text';
+import { InputTypeText } from  '../../../components/elements/input/type/text/index';
 import { InputTypeEmail } from '../../../components/elements/input/type/email/index';
 import { InputTypePassword } from '../../../components/elements/input/type/password/index';
 import { InputTypeCheckbox } from '../../../components/elements/input/type/checkbox/index';
@@ -41,7 +41,6 @@ const Login = (): JSX.Element => {
                 title={formConst.title.rememberMe}
               />
               <LoginButton />
-
             </form>
           </div>
         </article>
